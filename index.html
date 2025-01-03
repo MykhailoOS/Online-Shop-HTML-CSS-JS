@@ -4,9 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Online Shop</title>
-	<link rel="stylesheet" type="text/css" href="styles/main.css">
-	<link rel="stylesheet" href="styles/slick-theme.css">
-	<link rel="stylesheet" href="styles/slick.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css?v=1">
+	<link rel="stylesheet" type="text/css" href="styles/specs.css?v=1">
+	<link rel="stylesheet" type="text/css" href="styles/adopt.css?v=1">
+	<link rel="stylesheet" href="styles/slick-theme.css?v=1">
+	<link rel="stylesheet" href="styles/slick.css?v=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -22,7 +24,7 @@
 					<div class="nav_list">
 						<a href="index.html" class="nav_point">Home</a>
 						<a href="#why" class="nav_point">Why Us</a>
-						<a href="#items" class="nav_point">Products</a>
+						<a href="products.html" class="nav_point">Products</a>
 					</div>
 				</div>
 				<div class="right_part">
@@ -63,6 +65,49 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		$(document).ready(function(){
+			$('#banner_slider').slick({
+				dots: true,
+				arrows: true,
+				infinite: true,
+				speed: 500,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 3000
+			});
+
+			$('#items_slider').slick({
+				dots: false,
+				arrows: true, 
+				infinite: true,
+				speed: 500,
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				responsive: [
+					{
+						breakpoint: 1024,
+						settings: {
+							slidesToShow: 3
+						}
+					},
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 2
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 1
+						}
+					}
+				]
+			});
+		});
+	</script>
 	<div class="items" id="items">
 		<div class="main_padding">
 			<div class="items_group">
@@ -88,10 +133,10 @@
 							<div class="card_bottom">
 								<div class="price">2643,08 €</div>
 								<a href="#" class="add_cart">
-								<div class="add_cart_icon">
-									<img src="images/icons/cart.svg">
-								</div>
-							</a>
+									<div class="add_cart_icon">
+										<img src="images/icons/cart.svg">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -113,10 +158,10 @@
 							<div class="card_bottom">
 								<div class="price">331 €</div>
 								<a href="#" class="add_cart">
-								<div class="add_cart_icon">
-									<img src="images/icons/cart.svg">
-								</div>
-							</a>
+									<div class="add_cart_icon">
+										<img src="images/icons/cart.svg">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -138,14 +183,13 @@
 							<div class="card_bottom">
 								<div class="price">1000 €</div>
 								<a href="#" class="add_cart">
-								<div class="add_cart_icon">
-									<img src="images/icons/cart.svg">
-								</div>
-							</a>
+									<div class="add_cart_icon">
+										<img src="images/icons/cart.svg">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
-
 
 					<div class="item_slide">
 						<div class="item_card">
@@ -159,19 +203,18 @@
 							</div>
 							<div class="card_descr">
 								<div class="descr_type">TV</div>
-								<div class="descr_text">OLED83C39LA OLED 2,11 m (84K Ultra HD</div>
+								<div class="descr_text">OLED83C39LA OLED 2,11 m 84K Ultra HD</div>
 							</div>
 							<div class="card_bottom">
 								<div class="price">3000 €</div>
 								<a href="#" class="add_cart">
-								<div class="add_cart_icon">
-									<img src="images/icons/cart.svg">
-								</div>
-							</a>
+									<div class="add_cart_icon">
+										<img src="images/icons/cart.svg">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
-
 
 					<div class="item_slide">
 						<div class="item_card">
@@ -190,10 +233,10 @@
 							<div class="card_bottom">
 								<div class="price">331 €</div>
 								<a href="#" class="add_cart">
-								<div class="add_cart_icon">
-									<img src="images/icons/cart.svg">
-								</div>
-							</a>
+									<div class="add_cart_icon">
+										<img src="images/icons/cart.svg">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -215,16 +258,17 @@
 							<div class="card_bottom">
 								<div class="price">2.643,08 €</div>
 								<a href="#" class="add_cart">
-								<div class="add_cart_icon">
-									<img src="images/icons/cart.svg">
-								</div>
-							</a>
+									<div class="add_cart_icon">
+										<img src="images/icons/cart.svg">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 	<div class="why" id="why">
 		<div class="main_padding">
@@ -233,7 +277,7 @@
 					<div class="items_text">Why Us</div>
 				</div>
 				<div class="why_list">
-					<div class="why_card">
+					<div class="why_card" id="why_c">
 						<div class="why_card_top">
 							<div class="why_icon_wrapper">
 								<div class="why_icon">
@@ -298,10 +342,10 @@
 							<div class="card_bottom">
 								<div class="price">2643,08 €</div>
 								<a href="#" class="add_cart">
-								<div class="add_cart_icon">
-									<img src="images/icons/cart.svg">
-								</div>
-							</a>
+									<div class="add_cart_icon">
+										<img src="images/icons/cart.svg">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -323,10 +367,10 @@
 							<div class="card_bottom">
 								<div class="price">331 €</div>
 								<a href="#" class="add_cart">
-								<div class="add_cart_icon">
-									<img src="images/icons/cart.svg">
-								</div>
-							</a>
+									<div class="add_cart_icon">
+										<img src="images/icons/cart.svg">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -348,14 +392,13 @@
 							<div class="card_bottom">
 								<div class="price">1000 €</div>
 								<a href="#" class="add_cart">
-								<div class="add_cart_icon">
-									<img src="images/icons/cart.svg">
-								</div>
-							</a>
+									<div class="add_cart_icon">
+										<img src="images/icons/cart.svg">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
-
 
 					<div class="item_slide">
 						<div class="item_card">
@@ -369,19 +412,18 @@
 							</div>
 							<div class="card_descr">
 								<div class="descr_type">TV</div>
-								<div class="descr_text">OLED83C39LA OLED 2,11 m (84K Ultra HD</div>
+								<div class="descr_text">OLED83C39LA OLED 2,11 m 84K Ultra HD</div>
 							</div>
 							<div class="card_bottom">
 								<div class="price">3000 €</div>
 								<a href="#" class="add_cart">
-								<div class="add_cart_icon">
-									<img src="images/icons/cart.svg">
-								</div>
-							</a>
+									<div class="add_cart_icon">
+										<img src="images/icons/cart.svg">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
-
 
 					<div class="item_slide">
 						<div class="item_card">
@@ -400,10 +442,10 @@
 							<div class="card_bottom">
 								<div class="price">331 €</div>
 								<a href="#" class="add_cart">
-								<div class="add_cart_icon">
-									<img src="images/icons/cart.svg">
-								</div>
-							</a>
+									<div class="add_cart_icon">
+										<img src="images/icons/cart.svg">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -423,12 +465,12 @@
 								<div class="descr_text">Apple Mac mini M2 MNH73D/A-Z08841631</div>
 							</div>
 							<div class="card_bottom">
-								<div class="price">2643,08 €</div>
+								<div class="price">2.643,08 €</div>
 								<a href="#" class="add_cart">
-								<div class="add_cart_icon">
-									<img src="images/icons/cart.svg">
-								</div>
-							</a>
+									<div class="add_cart_icon">
+										<img src="images/icons/cart.svg">
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -459,19 +501,53 @@
 				</div>
 				<div class="sep"></div>
 				<div class="last_part">
-					<div class="policy">Online Shop © 2024. All rights reserved.</div>
+					<div class="policy">Online Shop © 2025. All rights reserved.</div>
 					<div class="nav">
 						<div class="nav_list">
 							<a href="index.html" class="nav_point">Home</a>
-							<a href="#why" class="nav_point">Why Us</a>
-							<a href="#items" class="nav_point">Products</a>
+							<a href="index.html" class="nav_point">Why Us</a>
+							<a href="products.html" class="nav_point">Products</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	<style>
+		@media (max-width: 768px) {
+			.footer {
+				padding: 20px 0;
+			}
+			.footer_top {
+				flex-direction: column;
+				align-items: center;
+			}
+			.logo img {
+				width: 150px;
+				margin-bottom: 20px;
+			}
+			.socs {
+				display: flex;
+				justify-content: center;
+				gap: 15px;
+				margin-bottom: 20px;
+			}
+			.footer_icon img {
+				width: 30px;
+			}
+			.last_part {
+				text-align: center;
+			}
+			.nav_list {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+			.nav_point {
+				font-size: 14px;
+			}
+		}
+	</style>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/slick.js"></script>
@@ -487,6 +563,8 @@
     		speed: 1000,
 		});
 
+		
+
 		$('#items_slider').slick({
 			infinite: true,
   			slidesToShow: 4,
@@ -495,11 +573,59 @@
 		});
 
 		$('#items_slider2').slick({
+			dots: false,
+			arrows: true, 
 			infinite: true,
-  			slidesToShow: 4,
-  			slidesToScroll: 4,
-  			dots: true
+			speed: 500,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]
 		});
+		
+
+
 	</script>
 </body>
+
+<!-- <div class="item_card">
+	<div class="card_top">
+		<div class="sale_label">-25%</div>
+	</div>
+	<div class="card_image">
+		<div class="card_img">
+			<img src="images/card1.jpg">
+		</div>
+	</div>
+	<div class="card_descr">
+		<div class="descr_type">Mini-PC</div>
+		<div class="descr_text">Apple Mac mini M2 MNH73D/A-Z08841631</div>
+	</div>
+	<div class="card_bottom">
+		<div class="price">2643,08 €</div>
+		<a href="#" class="add_cart">
+			<div class="add_cart_icon">
+				<img src="images/icons/cart.svg">
+			</div>
+		</a>
+	</div>
+</div> -->
 </html>
